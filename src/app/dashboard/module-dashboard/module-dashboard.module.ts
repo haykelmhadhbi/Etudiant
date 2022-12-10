@@ -9,6 +9,7 @@ import { SharedModule } from 'src/app/shared/module/shared/shared.module';
 import { RouterModule } from '@angular/router';
 import { OptionComponent } from '../components/option/option.component';
 import {NgxPaginationModule}from 'ngx-pagination'
+import { GendreComponent } from '../components/gendre/gendre.component';
 
 
 
@@ -17,7 +18,8 @@ import {NgxPaginationModule}from 'ngx-pagination'
   declarations: [
     StudentComponent,
     TableStudentComponent,
-    OptionComponent
+    OptionComponent,
+    GendreComponent
     
     
   ],
@@ -36,7 +38,8 @@ import {NgxPaginationModule}from 'ngx-pagination'
   exports:[
     StudentComponent,
     TableStudentComponent,
-    OptionComponent
+    OptionComponent,
+    GendreComponent
     
   ]
 })

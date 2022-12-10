@@ -23,6 +23,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
     NavStudComponent,
     
     
+    
    ],
   imports: [
     BrowserModule,

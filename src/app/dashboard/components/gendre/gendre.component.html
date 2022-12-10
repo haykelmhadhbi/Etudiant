@@ -1,0 +1,62 @@
+<div class="card w-100">
+    <div class="card-body">
+      <h5 class="card-title">list of students by gender</h5>
+      <p class="card-text">select students by gender</p>
+      <div class="input-group">
+        <select #getStBysexe class="form-select" id="inputGroupSelect04" aria-label="Example select with button addon"
+          type="sexe" #opt="ngModel" [(ngModel)]="empSelected" name="sexe" id="sexe"
+         (ngModelChange)="onGendreSelected($event) " >
+          <option selected disabled>Choose...</option>
+          <option *ngFor="let g of Gendre " [value]="g.gend">{{g.gend}}</option>
+
+          
+        </select>
+        <button  class="btn btn-dark " type="button" (click)="getStudentBygendre()" data-bs-toggle="modal" data-bs-target="#exampleModal" >OK</button>
+      </div>    </div>
+  </div>
+
+
+
+<div id="exampleModal" class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">List of students by gender is {{studentwithsexe.gend}}</h5>
+              <span aria-hidden="true">&times;</span>
+          </div>
+
+        <table class="table table-bordered">
+            <thead class="table table-striped table-dark">
+                <tr>
+                    <th>  idEtudiant </th>
+                    <th>  FirstName </th>
+                    <th>  LastName </th>
+                    <th>  Email </th>
+                    <th>  Option </th>
+                    <th>  department </th>
+                    <th>  Age </th>
+                    
+    
+    
+    
+                </tr>
+    
+            </thead>
+            <tbody class="tbody">
+                <tr *ngFor="let student of studentBysexe | paginate:{itemsPerPage:tableSize,currentPage:page,totalItems:count};let i=index">
+                    <td> {{student.idEtudiant}} </td>
+                    <td> {{student.prenomE | uppercase}} </td>
+                    <td> {{student.nomE | uppercase}} </td>
+                    <td> {{student.emailE }} </td>
+                    <td  > {{student.opt}} </td>
+                    <td > {{student.depart.nomDepart}} </td>
+                    <td> {{student.ageE}} </td>
+                    
+                   
+                    
+                </tr>
+            </tbody>
+        </table> 
+    </div>
+  </div>
+</div>

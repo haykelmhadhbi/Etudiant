@@ -33,4 +33,9 @@ export class ServiceStudentService {
   public getEtudiantByOption (op){
     return this.http.get(this.API+'/getEtudiantByOption/'+op)
   }
+
+  public getEtudiantBySexe (sexe){
+    return this.http.get(this.API+'/getEtudiantBySexe/'+sexe)
+  }
+
 }
