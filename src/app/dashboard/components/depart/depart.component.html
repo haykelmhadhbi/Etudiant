@@ -1,1 +1,14 @@
-<p>depart works!</p>
+<div class="card text-white bg-dark mb-3 card w-100" style="width: 18rem;">
+    <div class="card-header">retrieve students according to the department reference</div>
+    <div class="card-body">
+        <div class="input-group mb-3">
+            
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <button type="button" class="btn btn-secondary" (click)="getStudentByIddepart()">Secondary</button>
+
+                </div>
+                <input type="text"  #idDepart [(ngModel)]="studentwithIdDep.idDepart" name="idDepart" id="idDepart" aria-label="idDepart" class="form-control" placeholder="idDepart">              </div>
+          </div>
+    </div>
+  </div>

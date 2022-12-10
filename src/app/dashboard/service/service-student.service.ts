@@ -37,5 +37,8 @@ export class ServiceStudentService {
   public getEtudiantBySexe (sexe){
     return this.http.get(this.API+'/getEtudiantBySexe/'+sexe)
   }
+  public getEtudiantByIdDepartment(id){
+    return this.http.get(this.API+'/getEtudiantsByDepartementt/'+id)
+  }
 
 }

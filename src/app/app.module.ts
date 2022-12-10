@@ -22,7 +22,7 @@ import { DepartComponent } from './dashboard/components/depart/depart.component'
   declarations: [
     AppComponent,
     NavStudComponent,
-    DepartComponent,
+    
     
     
     
