@@ -15,12 +15,14 @@ import { NavStudComponent } from './dashboard/components/nav-stud/nav-stud.compo
 import { IStudent } from './dashboard/model/student';
 import { OptionComponent } from './dashboard/components/option/option.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { DepartComponent } from './dashboard/components/depart/depart.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     NavStudComponent,
+    DepartComponent,
     
     
     
