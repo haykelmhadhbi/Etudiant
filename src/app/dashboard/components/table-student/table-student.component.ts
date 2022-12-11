@@ -18,6 +18,7 @@ export class TableStudentComponent implements OnInit {
   modifiedtext : any ;
   studentByOpt : any []
   Option : any [];
+  object : any []
 
 
 
@@ -49,7 +50,7 @@ export class TableStudentComponent implements OnInit {
     this.selectgender=event.target.value
 
    }
-
+   
 
 
 
@@ -80,12 +81,15 @@ export class TableStudentComponent implements OnInit {
 
       this.customFunction(val);
       this.studentwithOpt.opt=val;
-      console.log("jasa")
       console.log(this.studentwithOpt.opt)
 
     }
     customFunction (val:any){
+      if (this.studentByOpt == this.object )
+      this.modifiedtext= " choice not exist " + " "+ val 
+      else if (this.studentByOpt != this.object )
       this.modifiedtext= "Successful choice of " + " "+ val 
+
     }
     
 }

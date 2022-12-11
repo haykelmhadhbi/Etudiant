@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ServiceStudentService } from '../../service/service-student.service';
 
 @Component({
@@ -7,6 +8,7 @@ import { ServiceStudentService } from '../../service/service-student.service';
   styleUrls: ['./depart.component.css']
 })
 export class DepartComponent implements OnInit {
+  myForm:FormGroup;
 
   constructor(private studentService: ServiceStudentService) { }
 
@@ -33,6 +35,9 @@ export class DepartComponent implements OnInit {
 
   ngOnInit(): void {
     this.getStudentByIddepart()
+    this.myForm=new FormGroup({
+      idDpart:new FormControl('',[Validators.required,Validators.pattern('^[0-9]*')])
+    })
   }
 
 
@@ -40,6 +45,8 @@ export class DepartComponent implements OnInit {
     this.studentService.getEtudiantByIdDepartment(this.studentwithIdDep.idDepart).subscribe(
       (res:any)=>{
         this.studentByIdep=res  ;
+        console.log("CV id dep");
+
         console.log( this.studentByIdep)
 
         
