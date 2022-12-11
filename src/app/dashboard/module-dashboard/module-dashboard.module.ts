@@ -11,6 +11,7 @@ import { OptionComponent } from '../components/option/option.component';
 import {NgxPaginationModule}from 'ngx-pagination'
 import { GendreComponent } from '../components/gendre/gendre.component';
 import { DepartComponent } from '../components/depart/depart.component';
+import { AffichageopComponent } from '../components/affichageop/affichageop.component';
 
 
 
@@ -21,7 +22,8 @@ import { DepartComponent } from '../components/depart/depart.component';
     TableStudentComponent,
     OptionComponent,
     GendreComponent,
-    DepartComponent
+    DepartComponent,
+    
     
     
   ],
@@ -42,7 +44,8 @@ import { DepartComponent } from '../components/depart/depart.component';
     TableStudentComponent,
     OptionComponent,
     GendreComponent,
-    DepartComponent
+    DepartComponent,
+    
     
   ]
 })

@@ -5,10 +5,58 @@
             
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
-                    <button type="button" class="btn btn-secondary" (click)="getStudentByIddepart()">Secondary</button>
+                    <button type="button" class="btn btn-secondary" (click)="getStudentByIddepart()" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Secondary</button>
 
                 </div>
                 <input type="text"  #idDepart [(ngModel)]="studentwithIdDep.idDepart" name="idDepart" id="idDepart" aria-label="idDepart" class="form-control" placeholder="idDepart">              </div>
           </div>
     </div>
   </div>
+
+  <div class="modal fade bd-example-modal-xl" id="staticBackdrop" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header"  >
+          <h5 class="modal-title" id="exampleModalLabel">list of students where by depart   {{studentwithIdDep.idDepart}} </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+    
+        <dl class="list-group"  >
+          <table class="table table-bordered">
+            <thead class="table table-striped table-dark">
+                <tr>
+                    <th>  idEtudiant </th>
+                    <th>  FirstName </th>
+                    <th>  LastName </th>
+                    <th>  Email </th>
+                    <th>  Option </th>
+                    <th>  department </th>
+                    <th>  Age </th>
+             
+                   
+        
+        
+        
+                </tr>
+        
+            </thead>
+            <tbody class="tbody">
+                <tr *ngFor="let student of studentByIdep ">
+                    <td> {{student.idEtudiant}} </td>
+                    <td> {{student.prenomE  }} </td>
+                    <td> {{student.nomE }} </td>
+                    <td> {{student.emailE }} </td>
+                    <td  > {{student.opt}} </td>
+                    <td > {{student.depart.nomDepart}} </td>
+                    <td> {{student.ageE}} </td>
+                    
+                    
+                </tr>
+            </tbody>
+        </table> 
+          
+          </dl>
+      
+      </div>
+    </div>
+    </div>

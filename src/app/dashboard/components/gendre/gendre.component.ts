@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ServiceStudentService } from '../../service/service-student.service';
 
 @Component({
@@ -15,13 +16,13 @@ count:number=0;
 tableSize:number=5;
 tablesSizes:any=[1,2,3,4];
 titles="pagination"
-
+showMe:boolean=false
 
   name : any ="Male"
   empSelected: any ;
 
 
-  constructor(private studentService: ServiceStudentService) { }
+  constructor(private studentService: ServiceStudentService , private router : Router) { }
 
   ngOnInit(): void {
     this.getStudentByGender()
@@ -33,6 +34,7 @@ titles="pagination"
 
     this.studentBySexe
   }
+ 
 
 
 
@@ -40,8 +42,10 @@ getStudentByGender (){
   this.studentService.getEtudiantBySexe(this.studentwithgendre.gendr).subscribe(
     (res:any)=>{
       console.log("cbon sexe")
-      console.log(res)
+      // console.log(res)
+      this.router.navigate(['optcompont',this.studentwithgendre.gendr])
       this.studentBySexe=res;
+     
     },
     (erro:any)=>{
       console.log("chay sexe")
@@ -63,6 +67,9 @@ onGendreSelected(val:any){
 studentwithgendre  ={
   gendr : ""
 
+}
+toogleTag(){
+  this.showMe=true
 }
 
  }

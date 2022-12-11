@@ -16,16 +16,13 @@ import { IStudent } from './dashboard/model/student';
 import { OptionComponent } from './dashboard/components/option/option.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { DepartComponent } from './dashboard/components/depart/depart.component';
+import { AffichageopComponent } from './dashboard/components/affichageop/affichageop.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavStudComponent,
-    
-    
-    
-    
+    NavStudComponent
    ],
   imports: [
     BrowserModule,
@@ -34,10 +31,6 @@ import { DepartComponent } from './dashboard/components/depart/depart.component'
     HttpClientModule,
     CommonModule,
     NgxPaginationModule
-    
-    
-
-
   ],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA
